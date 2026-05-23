@@ -1,0 +1,1 @@
+“IL DUKE” es un proyecto retomado de un curso de UX/UI realizado en 2025. Durante el curso se desarrolló el rediseño de un sitio web preexistente, con el objetivo de corregir distintos aspectos que afectaban la experiencia de usuario. En esta nueva etapa, el proyecto busca trasladar ese rediseño al desarrollo funcional mediante la implementación de código. 
