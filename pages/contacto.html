@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header-full">
+        <div class="header-content">
+
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/img/logo1.png" alt="Logo IL DUKE">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/ofertas.html">Ofertas</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <a href="./index.html">
+                    <img src="../assets/img/fi-rr-zoom-in.png" alt="icono de búsqueda">
+                </a>
+                <a href="./index.html">
+                    <img src="../assets/img/fi-rr-user.png" alt="icono de usuario">
+                </a>
+                <a href="./index.html">
+                    <img src="../assets/img/fi-rr-shopping-cart.png" alt="icono de carrito">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="contacto-container">
+
+            <!-- Columna 1: Información -->
+            <div class="contacto-info">
+                <h1>Contáctanos</h1>
+                <p class="contacto-text">Si tienes alguna pregunta, comentario o necesitas asistencia, no dudes en
+                    contactarnos. Estamos aquí para ayudarte.</p>
+            </div>
+
+            <!-- Columna 2: Formulario -->
+            <div class="contacto-form">
+                <form action="#">
+                    <div class="grid-inputs">
+
+                        <input type="text" name="nomb" id="name" placeholder="Nombre" required>
+                        <!-- placeholder es un texto de ayuda que se muestra dentro del campo de entrada y al escribir algo se borra -->
+
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <!-- type email hace que se valide que lo ingresado sea un email válido -->
+
+                        <textarea name="mensaje" id="message" placeholder="Mensaje" required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

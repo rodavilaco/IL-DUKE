@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-full {
+  width: 100%;
+  background-color: rgba(32, 32, 32, 1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+  display:block;
+}
+
+.main-nav {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap:40px;
+}
+
+.header-icons {
+    flex: 1; /* Ocupa 1 parte (igual que el logo para equilibrar) */
+    display: flex;
+    justify-content: flex-end; /* Empuja los iconos a la derecha */
+    gap: 40px;
+}
+
+.header-icons img {
+    max-height: 18px; /* Tamaño de los iconos */
+    width: auto;
+    cursor: pointer; /* Cambia el cursor al pasar sobre los iconos */
+}
+
+.main-nav a {
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+  font-family:"Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+/* ESTILOS PARA BANNER */ 
+
+.banner-container img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-banner {
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  background-color: rgba(32, 32, 32, 1);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family:"Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* ESTILOS PARA CARDS */ 
+.productos-container {
+    margin: 40px 0px 100px 80px;
+}
+
+.productos-container h1{
+    font-family:"Manrope", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.productos-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa el título y el icono al máximo */
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.icono-sig img {
+    width: 24px; /* Tamaño del icono */
+    height: auto;
+    transition: transform 0.3s ease; /* Agrega una transición suave para el efecto hover */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
+}
+
+.icono-sig img:hover {
+    transform: translateX(5px); /* Mueve el icono 5px a la derecha al hacer hover */
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea las cards al inicio del contenedor */
+    
+    /* TRUCO CLAVE */
+    overflow-x: auto;          /* Activa el scroll horizontal cuando no caben */
+    scroll-snap-type: x mandatory; /* Hace que las cards "encajen" al deslizar */
+    
+    /* Opcional: oculta la barra de scroll en algunos navegadores */
+    -webkit-overflow-scrolling: touch; 
+}
+
+.card {
+    flex: 0 0 280px;   /* No crece, no se achica, mide exactamente 280px */
+    scroll-snap-align: start;
+    margin-right: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    /* Evita que el contenido se desborde si hay textos largos */
+    overflow: hidden; 
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;          /* Tamaño legible (antes estaba en 1px) */
+    font-weight: bold;         /* Le da jerarquía visual al nombre del producto */
+    color: rgba(32, 32, 32, 1);
+    margin: 5px 0;
+}
+
+.card h3 {
+    font-family:"Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: medi;
+    margin: 5px 0;
+    color: rgba(32, 32, 32, 1);
+}
+
+.card p {
+    font-family:"Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: medium;
+    margin: 10px 0;
+    color: rgba(140, 135, 135, 1);
+}
+
+/* Personalizar la barra de scroll para que sea sutil */
+.carousel-container::-webkit-scrollbar {
+    height: 6px;
+}
+.carousel-container::-webkit-scrollbar-thumb {
+    background: rgba(155, 156, 156, 0.5); /* Color de tu logo */
+    border-radius: 10px;
+}
+
+/* ESTILOS PARA PAGE CONTACTO*/ 
+.contacto-container {
+    display: flex;
+    gap: 100px;
+    padding: 60px 100px;
+    align-items: flex-start;
+}
+
+.contacto-info {
+    flex: 1;
+    font-family: "Manrope", sans-serif;
+}
+
+.contacto-info h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contacto-form {
+    flex: 2;
+}
+
+.grid-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los campos */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Manrope", sans-serif;
+}
+
+#message {
+    grid-column: span 2; /* Hace que el textarea ocupe las dos columnas */
+    height: 150px;
+    resize: none; /* Evita que el usuario pueda cambiar el tamaño del textarea */
+}
+
+.btn-enviar {
+    margin-top: 10px;
+    padding: 12px 40px;
+    background-color: rgba(32, 32, 32, 1);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: rgba(32, 32, 32, 0.8);
+}
